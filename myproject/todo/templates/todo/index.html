@@ -57,6 +57,7 @@
 							{% else %}
 							<a href="{% url 'complete' todo.id %}"><li class="list-group-item">{{ todo.text }}</li></a>
 							<img src="{{todo.image_url}}" height="100" width="100">
+							
 							{% endif %}
 						{% endfor %}
 					</ul>
