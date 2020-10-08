@@ -6,6 +6,7 @@ from .forms import TodoForm
 
 def index(request):
     todo_list = Todo.objects.order_by('id')
+    todo_list = Todo.objects.all().order_by('id')
 
     form = TodoForm()
 
@@ -25,6 +26,7 @@ def addTodo(request):
 
 def completeTodo(request, todo_id):
     todo = Todo.objects.get(pk=todo_id)
+    todo = Todo.objects.all().get(pk=todo_id)
     todo.complete = True
     todo.save()
 
