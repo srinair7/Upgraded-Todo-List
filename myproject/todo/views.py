@@ -16,11 +16,11 @@ def index(request):
 
 @require_POST
 def addTodo(request):
-    form = TodoForm(request.POST)
+    form = TodoForm(request.POST, request.FILES)
 
     if form.is_valid():
-        new_todo = Todo(text=request.POST['text'])
-        new_todo.save()
+        form.save()
+        return redirect('/')
 
     return redirect('index')
 
