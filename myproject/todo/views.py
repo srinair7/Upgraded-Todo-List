@@ -5,11 +5,8 @@ from .models import Todo
 from .forms import TodoForm
 
 def index(request):
-<<<<<<< HEAD
     todo_list = Todo.objects.order_by('id')
-=======
     todo_list = Todo.objects.all().order_by('id')
->>>>>>> fde8ace... added image feature
 
     form = TodoForm()
 
@@ -28,11 +25,8 @@ def addTodo(request):
     return redirect('index')
 
 def completeTodo(request, todo_id):
-<<<<<<< HEAD
     todo = Todo.objects.get(pk=todo_id)
-=======
     todo = Todo.objects.all().get(pk=todo_id)
->>>>>>> fde8ace... added image feature
     todo.complete = True
     todo.save()
 
