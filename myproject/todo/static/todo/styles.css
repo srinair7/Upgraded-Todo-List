@@ -1,12 +1,13 @@
 body {
-	background: rgba(44, 62, 80, .8);
+	background: linear-gradient(90deg, #6a3093 0%, #a044ff 100%);
 	font-family: 'Oswald', 'Futura', sans-serif;
+	font-size: medium;
 }
 #wrapper {
 	margin-top: 10% !important;
 }
 #content {
-	background: beige;
+	background: linear-gradient(90deg, #e3ffe7 0%, #d9e7ff 100%);
 	padding: 25px;
 }
 #content > h2 {
@@ -29,5 +30,7 @@ footer {
 	color: white;
 }
 .list-group-item {
-	color: black;
+	padding: 10px;
+	color: white;
+	background-color:purple;
 }
